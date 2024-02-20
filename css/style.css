@@ -24,7 +24,7 @@ h2 {
     font-weight: 700;
     color: #363e6b;
     letter-spacing: 0.02em;
-    margin-bottom: 17px;
+    margin: 55px 0 20px 0;
 }
 
 h3 {
@@ -32,6 +32,10 @@ h3 {
     font-weight: 600;
     margin: 25px 0 7px 0;
     letter-spacing: 0.02em;
+}
+
+img:first-of-type {
+    margin-top: 0;
 }
 
 img {
@@ -100,8 +104,14 @@ nav ul li.current {
 
 /* Body */
 
+div.welcome h2 {
+    margin-top: 20px;
+}
+
 h2.title {
-    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    line-height: 1.2em;
 }
 
 div.rating > div > p {
@@ -117,7 +127,7 @@ body > header > h1, main {
 }
 
 main {
-    padding: 35px;
+    padding: 10px 35px 50px 35px;
     background: #fff;
 }
 
@@ -129,15 +139,24 @@ main > p:last-child {
     text-align: center;
     font-size: 2em;
     letter-spacing: 0.1em;
-    margin-bottom: 15px;
 }
 
-/* Books */
+/* Reviews */
 
 p.sub_title {
     font-style: italic;
     font-weight: 400;
     color: #767575;
+}
+
+a.linktoitem {
+    display: block;
+    margin: 30px 0 40px 0;
+    font-style: italic;
+    background-color: #dfdfdf;
+    padding: 15px 0 15px 20px;
+    text-decoration: none;
+    color: #363e6b;
 }
 
 div.readwatchagain {
@@ -173,11 +192,15 @@ div.readwatchagain > p.select {
     }
 
     img {
-        margin: 50px 0 50px 0;
+        margin: 20px 0 20px 0;
     }
     
     h1 {
         letter-spacing: 0.06em;
+    }
+
+    h2 {
+        font-size: 2.3em;
     }
     
     nav ul {
@@ -214,13 +237,16 @@ div.readwatchagain > p.select {
     div.readwatchagain > p {
         margin-top: 10px;
     }
+
+    nav ul li:hover {
+        letter-spacing: 0.3em;
+    }
       
-    nav ul li:hover{
+    nav ul li:hover, a.linktoitem:hover{
         background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
         animation:slidebg 5s linear infinite;
         color: #fff;
         font-weight: 700;
-        letter-spacing: 0.3em;
      }
      
      
@@ -236,10 +262,6 @@ div.readwatchagain > p.select {
 
     main > div.welcome {
         grid-area: 1 / 1 / span 1 / span 2;
-    }
-
-    main > div.welcome > img {
-        width: 60%;
     }
 }
 
