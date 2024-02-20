@@ -34,14 +34,14 @@ h3 {
     letter-spacing: 0.02em;
 }
 
-img:first-of-type {
-    margin-top: 0;
-}
-
 img {
     margin-top: 30px;
     margin-bottom: 10px;
     width: 100%;
+}
+
+div.updates > img {
+    margin-top: 0;
 }
 
 footer {
@@ -74,7 +74,8 @@ span.highlight {
 
 /* Navigation */
 
-nav ul li {
+nav ul li a {
+    display: block;
     margin-bottom: 13px;
     padding: 15px 0 15px 0;
     background-color: #fff;
@@ -90,11 +91,7 @@ nav ul li a {
     color: inherit;
 }
 
-nav ul li:last-child {
-    margin-bottom: 0;
-}
-
-nav ul li.current {
+nav ul li a.current {
     font-style: italic;
     font-weight: bold;
     color: #fff;
@@ -112,6 +109,15 @@ h2.title {
     margin-top: 20px;
     margin-bottom: 8px;
     line-height: 1.2em;
+}
+
+main > div.updates > h3:first-child {
+    margin-top: 0;
+}
+
+main > div.updates > h3 {
+    margin-top: 70px;
+    margin-bottom: 25px;
 }
 
 div.rating > div > p {
@@ -143,6 +149,10 @@ main > p:last-child {
 
 /* Reviews */
 
+main.reviews > div {
+    border-bottom: 2px solid #dfdfdf;
+}
+
 p.sub_title {
     font-style: italic;
     font-weight: 400;
@@ -157,6 +167,7 @@ a.linktoitem {
     padding: 15px 0 15px 20px;
     text-decoration: none;
     color: #363e6b;
+    font-weight: 500;
 }
 
 div.readwatchagain {
@@ -164,8 +175,7 @@ div.readwatchagain {
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     padding-bottom: 70px;
-    margin: 20px 0 40px 0;
-    border-bottom: 1px solid #dfdfdf;
+    margin: 20px 0 0 0;
 }
 
 div.readwatchagain > p {
@@ -215,15 +225,26 @@ div.readwatchagain > p.select {
     nav ul li {
         width: 100%;
         margin-bottom: 0;
-        padding: 22px 0 22px 0;
         font-weight: 300;
+    }
+
+    nav ul li a {
+        padding: 25px 0 25px 0;
     }
 
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        column-gap: 100px;
+        gap: 50px 100px;
         padding: 60px;
+    }
+
+    main > div.updates {
+        grid-column: 1 / span 2;
+    }
+
+    div > h3:first-child {
+        margin-top: 0;
     }
 
     div > div.rating p {
@@ -238,11 +259,11 @@ div.readwatchagain > p.select {
         margin-top: 10px;
     }
 
-    nav ul li:hover {
+    nav ul li a:hover {
         letter-spacing: 0.3em;
     }
       
-    nav ul li:hover, a.linktoitem:hover{
+    nav ul li a:hover, a.linktoitem:hover{
         background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
         animation:slidebg 5s linear infinite;
         color: #fff;
