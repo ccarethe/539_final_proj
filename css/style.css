@@ -9,6 +9,16 @@ body {
     cursor: url('../images/tiny_cursor_20.png'), default;
 }
 
+::selection {
+    background: #525d9c; /* WebKit/Blink Browsers */
+    color: #fff;
+  }
+
+::-moz-selection {
+    background: #525d9c; /* Gecko Browsers */
+    color: #fff;
+  }
+
 h1 {
     font-size: 3em;
     font-weight: 600;
