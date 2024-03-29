@@ -217,7 +217,13 @@ div.readwatchagain > p.select {
     text-transform: uppercase;
 }
 
-@media only screen and (min-width: 780px) {
+/* Recipes */
+.recipe_card {
+    border: 1px solid red;
+    padding: 50px;
+}
+
+@media only screen and (min-width: 900px) {
     
     body {
         font-size: 1.3em;
