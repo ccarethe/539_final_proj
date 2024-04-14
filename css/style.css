@@ -221,9 +221,36 @@ div.readwatchagain > p.select {
 }
 
 /* Recipes */
-.recipe_card {
-    border: 1px solid red;
-    padding: 50px;
+
+.recipe_card > h2 {
+    margin-top: 40px;
+}
+
+.recipe_card > img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.recipe_card > ul, .recipe_card > ol {
+    padding: 5px;
+}
+
+.recipe_card li {
+    padding: 5px 5px 5px 10px;
+    color: #fff;
+    background-color: #525d9c;
+    margin-bottom: 8px;
+    border-radius: 10px;
+}
+
+.recipe_card > ol > li {
+    list-style-position: inside;
+    padding: 20px;
+}
+
+.ingredient_count {
+    font-weight: bold;
+    font-style: italic;
 }
 
 @media only screen and (min-width: 900px) {
