@@ -1,4 +1,3 @@
-/* General */
 body {
     background: #f0f2fd;
     padding: 30px 20px 30px 20px;
@@ -8,16 +7,6 @@ body {
     line-height: 1.4;
     cursor: url('../images/tiny_cursor_20.png'), default;
 }
-
-::selection {
-    background: #525d9c; /* WebKit/Blink Browsers */
-    color: #fff;
-  }
-
-::-moz-selection {
-    background: #525d9c; /* Gecko Browsers */
-    color: #fff;
-  }
 
 h1 {
     font-size: 3em;
@@ -61,13 +50,6 @@ footer {
     color: #343434;
 }
 
-/* Header */
-
-span.highlight {
-    font-weight: 600;
-    color: #363e6b;
-}
-
 .skiptomain a {
     position: absolute;
     left: -1000px;
@@ -82,8 +64,6 @@ span.highlight {
     top: 5px;
     left: 5px;
 }
-
-/* Navigation */
 
 nav ul li a {
     display: block;
@@ -109,7 +89,11 @@ nav ul li a.current {
     background-color: #525d9c;
 }
 
-/* Body */
+/* Emphasized text in body paragraphs */
+span.highlight {
+    font-weight: 600;
+    color: #363e6b;
+}
 
 div.welcome h2 {
     margin-top: 20px;
@@ -135,7 +119,6 @@ div.rating > div > p {
 }
 
 div.rating > div > p:first-of-type {
-    /* letter-spacing: 0.3em; */
     font-style: italic;
 }
 
@@ -157,8 +140,6 @@ main > p:last-child {
     font-size: 2em;
     letter-spacing: 0.1em;
 }
-
-/* Reviews */
 
 main.reviews > div, main > div.updates > div {
     border-bottom: 2px solid #dfdfdf;
@@ -216,8 +197,6 @@ div.readwatchagain > p.select {
     background-color: #525d9c;
     text-transform: uppercase;
 }
-
-/* Recipes */
 
 .recipe_card > h2 {
     margin-top: 40px;
@@ -298,28 +277,6 @@ div.readwatchagain > p.select {
     align-items: start;
     clip-path: url(#stickyClip);
     padding: 30px 45px 30px 30px;
-  }
-  
-  /* Add responsiveness */
-  @media screen and (min-width: 640px) {
-    .sticky:before {
-      height: 79%;
-      width: 90%;
-    }
-  }
-  
-  @media screen and (min-width: 768px) {
-    .sticky:before {
-      height: 75%;
-      width: 90%;
-    }
-  }
-  
-  @media screen and (min-width: 1024px) {
-    .sticky:before {
-      height: 73%;
-      width: 90%;
-    }
   }
 
   .notes {
@@ -409,7 +366,8 @@ div.readwatchagain > p.select {
     nav ul li a:hover {
         letter-spacing: 0.3em;
     }
-      
+    
+    /* Nav link changes color when user hovers over it */
     nav ul li a:hover, a.linktoitem:hover{
         background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
         animation:slidebg 5s linear infinite;
@@ -447,6 +405,7 @@ div.readwatchagain > p.select {
         margin-top: 10px;
     }
 
+    /* Cursor changes when user hovers over ingredient / instruction for recipe to a check mark */
     .recipe_instructions > ol > li:hover, .recipe_instructions > ul > li:hover {
         cursor: url("../images/check_cursor.png"), default;
     }
@@ -470,13 +429,31 @@ div.readwatchagain > p.select {
         gap: 20px;
         margin-bottom: 100px;
     }
+    
+    /* Sticky note background changes color when user hovers over it */
+    .sticky-content:hover {
+        background: linear-gradient(
+          180deg,
+          #525d9c 0%,
+          #525d9c 12%,
+          #525d9c 75%,
+          #525d9c 100%
+        );
+        color: white;
+      }
 
     main > div.updates > div {
         margin-bottom: 0;
     }
+
+    .sticky-content {
+        font-size: 0.65em;
+    }
 }
 
-@media (prefers-reduced-motion) {
-    /* Update... */
+@media only screen and (min-width: 1100px) {
+    .sticky-content {
+        font-size: 0.9em;
+    }
 }
 
